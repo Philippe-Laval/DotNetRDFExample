@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetRDFExample", "DotNetRDFExample\DotNetRDFExample.csproj", "{FC7FF2D2-7D20-4A3A-B737-9A91AFC71410}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC7FF2D2-7D20-4A3A-B737-9A91AFC71410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC7FF2D2-7D20-4A3A-B737-9A91AFC71410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC7FF2D2-7D20-4A3A-B737-9A91AFC71410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC7FF2D2-7D20-4A3A-B737-9A91AFC71410}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9892D14B-B479-4938-B7D0-57827D1BE9A7}
+	EndGlobalSection
+EndGlobal
