@@ -29,13 +29,13 @@ namespace PlayWithDotNetRDF
                 TurtleParser ttlparser = new TurtleParser();
 
                 //Load using a Filename
-                ttlparser.Load(g, @"C:\Users\philippel\source\repos\PlayWithDotNetRDF\PlayWithDotNetRDF\Files\Test12.ttl");
+                ttlparser.Load(g, @"C:\Users\philippe\Documents\GitHub\DotNetRDFExample\DotNetRDFExample\Files\Test12.ttl");
 
                 //First we need an instance of the SparqlQueryParser
                 SparqlQueryParser parser = new SparqlQueryParser();
 
                 //Then we can parse a SPARQL string into a query
-                string query = File.ReadAllText(@"C:\Users\philippel\source\repos\PlayWithDotNetRDF\PlayWithDotNetRDF\Files\query1.txt");
+                string query = File.ReadAllText(@"C:\Users\philippe\Documents\GitHub\DotNetRDFExample\DotNetRDFExample\Files\query1.txt");
 
                 SparqlQuery q = parser.ParseFromString(query);
 
