@@ -117,7 +117,7 @@ namespace PlayWithDotNetRDF
             turtleWriter.Save(g, "HelloWorld.ttl");
         }
 
-        private static IGraph CreateGraph()
+        public static IGraph CreateGraph()
         {
             IGraph g = new Graph();
             g.BaseUri = new Uri("http://example.org/");
@@ -313,6 +313,50 @@ JsonLdParser 	    JSON-LD
 
             #endregion
         }
+
+        public void TestCompressingTurtleWriter()
+        {
+            IGraph g = CreateGraph();
+
+            CompressingTurtleWriter compressingTurtleWriter = new CompressingTurtleWriter();
+
+            SaveGraph(g, compressingTurtleWriter, "Example.ttl");
+        }
+
+        public void TestHtmlWriter()
+        {
+            IGraph g = CreateGraph();
+
+            HtmlWriter htmlWriter = new HtmlWriter();
+
+            SaveGraph(g, htmlWriter, "Example.html");
+        }
+
+
+        public void SaveGraph(IGraph g, IRdfWriter writer, String filename)
+        {
+            //Set Pretty Print Mode on if supported
+            if (writer is IPrettyPrintingWriter)
+            {
+                ((IPrettyPrintingWriter)writer).PrettyPrintMode = true;
+            }
+
+            //Set High Speed Mode forbidden if supported
+            if (writer is IHighSpeedWriter)
+            {
+                ((IHighSpeedWriter)writer).HighSpeedModePermitted = false;
+            }
+
+            //Set Compression Level to High if supported
+            if (writer is ICompressingWriter)
+            {
+                ((ICompressingWriter)writer).CompressionLevel = WriterCompressionLevel.High;
+            }
+
+            //Save the Graph
+            writer.Save(g, filename);
+        }
+
 
     }
 }

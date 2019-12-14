@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNetRDFExample;
+using System;
 using System.IO;
 using VDS.RDF;
 using VDS.RDF.Parsing;
@@ -20,6 +21,14 @@ namespace PlayWithDotNetRDF
                 p.PlayWithHelloWorld();
                 p.PlayWithReadingRdf();
                 p.TesPlayWithWritingRdft();
+                p.TestCompressingTurtleWriter();
+                p.TestHtmlWriter();
+
+                WorkingWithGraphs w = new WorkingWithGraphs();
+                w.TestBaseUri();
+                w.TestGetNodes();
+                w.SelectingTriples();
+                w.MergingGraphs();
 
 
                 Test1();
